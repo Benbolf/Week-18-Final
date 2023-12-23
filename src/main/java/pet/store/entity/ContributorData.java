@@ -60,6 +60,34 @@ public class ContributorData {
 	    
 	    
 	}
+
+	public Object getContributorName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 }
+
+private void copyEmployeeFields(employee, petStoreEmployee) {
+	copy first name, ID, job title, last name and phone
+	from petStoreEmployee
+	to employee
+}
+
+List<PetStoreData> result = new LinkedList<>();
+
+for(PetStore petStore : petStores) {
+	PetStoreData psd = new PetStoreData (petStore)
+			
+			psd.getCustomers().clear();
+	        psd.getEmployees().clear();
+	        
+	        result.add(psd);
+  }
+}
+
+ public void deletePetStoreById()  
+	 
+ 
+ findPetStoreById() delete();

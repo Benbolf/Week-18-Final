@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import pet.store.dao.ContributorDao;
 import pet.store.entity.Contributor;
+import pet.store.entity.ContributorData;
 
 @Service
 public class PetService {
