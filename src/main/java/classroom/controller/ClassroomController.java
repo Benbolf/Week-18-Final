@@ -1,5 +1,6 @@
-package pet.store.controller;
+package classroom.controller;
 
+import org.apache.juli.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,23 +9,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import classroom.entity.ContributorData;
+import classroom.service.ClassService;
 import lombok.extern.slf4j.Slf4j;
-import pet.store.entity.ContributorData;
-import pet.store.service.PetService;
 
 @RestController
-@RequestMapping("/pet_store")
+@RequestMapping("/classroom")
 @Slf4j
-public class PetStoreController {
+public class ClassroomController {
+	@SuppressWarnings("unused")
 	@Autowired
-	private PetService petStoreService;
+	private ClassService classroomService;
 	
 	@PostMapping("/contributor")
 	@ResponseStatus(code = HttpStatus.CREATED)
-	public PetStoreData insertPetStore (
-			@RequestBody PetStoreData contributorData) {
-		log.info("Creating pet store {}", contributorData);
-		return PetService.savePetStore(petStoreData);
+	public ClassroomData insertClassroom (
+			@RequestBody ClassroomData contributorData) {
+		Log.info("Creating classroom {}", contributorData);
+		Object classroomData;
+		return ClassService.saveClassroom(classroomData);
 	}
 }
 

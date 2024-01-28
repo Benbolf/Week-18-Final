@@ -1,4 +1,4 @@
-package pet.store.entity;
+package classroom.entity;
 
 public @interface ManyToMany {
 

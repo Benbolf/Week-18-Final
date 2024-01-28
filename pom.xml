@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pets</groupId>
-	<artifactId>pet-store</artifactId>
+	<artifactId>online-classroom</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pet-store</name>
-	<description>Pet Stores</description>
+	<name>online-classroom</name>
+	<description>Astronomy Classroom</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

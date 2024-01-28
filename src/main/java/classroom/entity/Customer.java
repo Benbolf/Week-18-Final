@@ -1,33 +1,32 @@
-package pet.store.entity;
+package classroom.entity;
 
+
+import java.util.HashSet;
+import java.util.Set;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.ManyToMany;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-
 @Data
 @Entity
-public class Employee {
+public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long employeeId;
+	private Long customerId;
 	
-	private String employeeFirstName;
-	private String employeeLastName;
-	private String emloyeePhone;
-	private String emloyeeJobTitle;
+	private String customerEmail;
+	private String customerFirstName;
+	private String customerLastName;
+	
 	
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name ="pet_store_id")
-	private PetStore petStore;
-	
+	@ManyToMany(mappedBy = "customers", cascade = CascadeType.PERSIST)
+	private Set<Classroom> classrooms = new HashSet<>();
 }

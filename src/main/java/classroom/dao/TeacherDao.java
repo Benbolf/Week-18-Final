@@ -1,9 +1,10 @@
-package pet.store.dao;
+package classroom.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import Employee.Dao.Employee;
 
-public interface EmployeeDao extends JpaRepository <Employee, Long> {
+
+public interface TeacherDao extends JpaRepository<Teacher, Long> {
 	
 }

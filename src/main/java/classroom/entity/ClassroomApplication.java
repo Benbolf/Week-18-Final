@@ -1,9 +1,9 @@
-package pet.store.entity;
+package classroom.entity;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication 
-public class PetStoreApplication {
+public class ClassroomApplication {
 
 	
 	
